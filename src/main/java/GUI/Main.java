@@ -1,10 +1,15 @@
 package GUI;
 
-public class Main {
+import javax.swing.*;
 
-    public static void main (String args[]){
-        System.out.println("I prefer C#, so tbh I am going to hevily rely on my old java project since I do not remember anything from this language");
+class main{
+    public static void main(String[] args){
+            SwingUtilities.invokeLater(
+                    new Runnable() {
+                        public void run() {
+                            GUI app=new GUI();
+                            app.setVisible(true);
+                         }
+                    });
     }
-
-
 }
