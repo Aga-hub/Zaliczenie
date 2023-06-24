@@ -3,6 +3,9 @@ import java.awt.*;
 import java.awt.image.*;
 import java.awt.geom.*;
 import javax.swing.*;
+import org.dcm4che2.data.*;
+import org.dcm4che2.io.*;
+import org.dcm4che2.util.*;
 
 public class ImagePanel extends JPanel {
     public static final Color   BACKGROUND_COLOR=Color.WHITE;

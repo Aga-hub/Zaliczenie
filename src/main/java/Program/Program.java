@@ -1,5 +1,8 @@
 package Program;
 
+import org.dcm4che2.data.*;
+import org.dcm4che2.io.*;
+import org.dcm4che2.util.*;
 import java.awt.image.BufferedImage;
 
 public class Program {
