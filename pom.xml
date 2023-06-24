@@ -21,17 +21,46 @@
         <repository>
             <id>www.dcm4che.org</id>
             <name>dcm4che Repository</name>
-            <url>https://www.dcm4che.org/maven2</url>
+            <url>https://maven.scijava.org/content/repositories/public/</url>
         </repository>
+
     </repositories>
-
-
     <dependencies>
+
         <dependency>
             <groupId>dcm4che</groupId>
             <artifactId>dcm4che-core</artifactId>
             <version>2.0.29</version>
         </dependency>
+        <dependency>
+            <groupId>dcm4che</groupId>
+            <artifactId>dcm4che-image</artifactId>
+            <version>2.0.29</version>
+        </dependency>
+        <dependency>
+            <groupId>dcm4che</groupId>
+            <artifactId>dcm4che-imageio</artifactId>
+            <version>2.0.29</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.media</groupId>
+            <artifactId>jai_imageio</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>apache-log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+
+
     </dependencies>
 
 </project>

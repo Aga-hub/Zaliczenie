@@ -2,6 +2,7 @@ package GUI;
 
 import Program.Program;
 
+import java.util.Hashtable;
 import java.io.*;
 import java.awt.*;
 import java.awt.image.*;
@@ -11,9 +12,9 @@ import javax.imageio.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-//import org.dcm4che2.data.*;
-//import org.dcm4che2.io.*;
-//import org.dcm4che2.util.*;
+import org.dcm4che2.data.*;
+import org.dcm4che2.io.*;
+import org.dcm4che2.util.*;
 
 public class GUI extends JFrame implements ActionListener {
     private ImagePanel panelOryg=null;
@@ -243,16 +244,5 @@ public class GUI extends JFrame implements ActionListener {
         this.pack();
     }
 
-
-    //metoda main
-    public static void main(String[] args){
-        SwingUtilities.invokeLater(
-                new Runnable() {
-                    public void run() {
-                        GUI app=new GUI();
-                        app.setVisible(true);
-                    }
-                });
-    }
 
 }
