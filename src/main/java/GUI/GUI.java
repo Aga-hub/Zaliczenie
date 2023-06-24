@@ -16,6 +16,7 @@ import org.dcm4che2.data.*;
 import org.dcm4che2.io.*;
 import org.dcm4che2.util.*;
 
+/**Klasa od interfejsu graficznego */
 public class GUI extends JFrame implements ActionListener {
     private ImagePanel panelOryg=null;
     private ImagePanel panelEdyt=null; //panele na obrazki
@@ -34,8 +35,8 @@ public class GUI extends JFrame implements ActionListener {
 
     private File file; //ścieżka do pliku
 
-
-    public GUI(){ //metoda tworząca całą aplikację, z GUI, menu i ramką
+    /**metoda tworząca całą aplikację, z GUI, menu i ramką*/
+    public GUI(){
         this.createGui();
         this.createMenu();
         this.createPanelSuwakow();
@@ -44,7 +45,8 @@ public class GUI extends JFrame implements ActionListener {
 
 
     @Override
-    public void actionPerformed(ActionEvent evt) //"Słuchacze" wyborów użytkownika - przyciski
+    /**"Słuchacze" wyborów użytkownika - przyciski*/
+    public void actionPerformed(ActionEvent evt)
     {
         if (evt.getActionCommand().equals("Otwórz")){
             JFileChooser filechooser=new JFileChooser(".");
@@ -120,7 +122,7 @@ public class GUI extends JFrame implements ActionListener {
         }
     }
 
-    //Metoda wyswietlajaca obrazek
+    /**Metoda wyswietlajaca obrazek*/
     private void setImageOryg(BufferedImage image){
         panelOryg.setImage(image);
         this.pack();
@@ -131,7 +133,7 @@ public class GUI extends JFrame implements ActionListener {
     }
 
 
-    // Metoda tworzaca GUI
+    /** Metoda tworzaca GUI*/
     private void createGui(){
         JPanel mainPanel=new JPanel();
         mainPanel.setLayout(new BorderLayout());
@@ -147,7 +149,7 @@ public class GUI extends JFrame implements ActionListener {
 
 
     }
-    //Metoda tworzaca menu i przyciski
+    /**Metoda tworzaca menu i przyciski*/
     private void createMenu(){
         Otwórz = new JButton("Otwórz");
         Zapisz = new JButton("Zapisz");
@@ -184,7 +186,8 @@ public class GUI extends JFrame implements ActionListener {
 
 
     }
-    private void createPanelSuwakow(){ //tworzenie panelu suwaków
+    /**tworzenie panelu suwaków*/
+    private void createPanelSuwakow(){
         JSlider kontrast = new JSlider(JSlider.HORIZONTAL, -10, 10, 0);
         JSlider jasnosc = new JSlider(JSlider.HORIZONTAL, -100, 100, 0);
         JSlider okno_filtracji = new JSlider(JSlider.HORIZONTAL, 1, 5, 1);
@@ -237,7 +240,7 @@ public class GUI extends JFrame implements ActionListener {
 
 
 
-    //Metoda ustawiajaca wlasciwosci okna
+    /**Metoda ustawiajaca wlasciwosci okna*/
     private void createFrame(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Przetwarzanie obrazów typu DICOM");

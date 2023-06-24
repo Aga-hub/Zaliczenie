@@ -7,12 +7,13 @@ import org.dcm4che2.data.*;
 import org.dcm4che2.io.*;
 import org.dcm4che2.util.*;
 
+/** klasa od panelu do obrazka wykorzystywanego w gui*/
 public class ImagePanel extends JPanel {
     public static final Color   BACKGROUND_COLOR=Color.WHITE;
     protected int   mWidth=600;
     protected int   mHeight=500;
     protected BufferedImage mImage=null;
-
+/**konstruktor panelu na obrazek*/
     public ImagePanel(int width,int height) { //konstruktor
         this.mWidth=width;
         this.mHeight=height;

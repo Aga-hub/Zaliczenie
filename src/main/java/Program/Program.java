@@ -4,6 +4,9 @@ import org.dcm4che2.data.*;
 import org.dcm4che2.io.*;
 import org.dcm4che2.util.*;
 import java.awt.image.BufferedImage;
+import org.dcm4che2.data.*;
+import org.dcm4che2.io.*;
+import org.dcm4che2.util.*;
 
 public class Program {
     static int k=0;
@@ -21,7 +24,8 @@ public class Program {
         }
     }
 
-    public static BufferedImage jasnosc(BufferedImage obrazOryg , int P){ //metoda zmiany jasności
+/**metoda od zmiany jasności*/
+        public static BufferedImage jasnosc(BufferedImage obrazOryg , int P){ //metoda zmiany jasności
         int wysokosc = obrazOryg.getHeight();
         int dlugosc = obrazOryg.getWidth();
         BufferedImage obrazFiltrowany = obrazOryg;
@@ -85,7 +89,7 @@ public class Program {
 
         return obrazFiltrowany;
     }
-
+/**metoda zmieniająca kontrast*/
     public static BufferedImage kontrast(BufferedImage obrazOryg , int P){ //metoda zmiany kontrastu
         int wysokosc = obrazOryg.getHeight();
         int dlugosc = obrazOryg.getWidth();
@@ -166,7 +170,7 @@ public class Program {
     }
 
 
-
+/**metoda od progowania */
     public static BufferedImage progowanie(BufferedImage obrazOryg , int P){ //metoda progowania
         int wysokosc = obrazOryg.getHeight();
         int dlugosc = obrazOryg.getWidth();
@@ -221,7 +225,7 @@ public class Program {
         }
         return obrazFiltrowany;
     }
-
+/** metoda od filtru medianowego*/
     public static BufferedImage filtrMedianowy(BufferedImage obrazOryg , int N) { //filtr medianowy
         int wysokosc = obrazOryg.getHeight();
         int dlugosc = obrazOryg.getWidth();
